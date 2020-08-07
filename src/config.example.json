@@ -1,0 +1,28 @@
+{
+  "discord": {
+    "token": "DISCORD BOT TOKEN",
+    "webhook": {
+      "id": "LOGGING WEBHOOK ID",
+      "token": "LOGGING WEBHOOK TOKEN"
+    },
+    "serverid": "DISCORD SERVER ID",
+    "defaultRole": {
+      "enabled": false,
+      "roleid": "DEFAULT ROLE ID"
+    }
+  },
+  "steam": {
+    "username": "STEAM USERNAME",
+    "password": "STEAM PASSWORD",
+    "shared_secret": "STEAM 2FA SHARED SECRET",
+    "apikey": "STEAM API KEY"
+  },
+  "mongodb": {
+    "link": "MONGODB LINK",
+    "dbname": "MONGODB DATABASE",
+    "collections": {
+      "roles": "MONGODB ROLES COLLECTION",
+      "accounts": "MONGODB ACCOUNTS COLLECTION"
+    }
+  }
+}
