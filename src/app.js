@@ -37,7 +37,7 @@ fs.readdir(path.join(__dirname, 'commands'), (error, commands) => {
     for (let i = 0; i < events.length; i++) {
       require('./events/' + events[i])(bot, config);
       if (i === events.length - 1) {
-        bot.log.info('Loaded ' + events.length + ' events!')
+        bot.log.info('Loaded ' + events.length + ' events!');
         bot.connect();
       }
     }

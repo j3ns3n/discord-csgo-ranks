@@ -1,17 +1,16 @@
 const Steam        = require('steam');
-const CSGO         = require('csgo');
+const CSGO         = require('globaloffensive');
+const User         = require('steam-user');
+const SteamTotp    = require('steam-totp');
 
 const fs           = require('fs');
 const path         = require('path');
 
-const handlerTypes = ['client', 'csgo', 'friends'];
+const handlerTypes = ['csgo', 'user'];
 
 module.exports = (bot, config) => {
-  let steamClient  = new Steam.SteamClient();
-  let steamUser    = new Steam.SteamUser(steamClient);
-  let steamGC      = new Steam.SteamGameCoordinator(steamClient, 730);
-  let steamFriends = new Steam.SteamFriends(steamClient);
-  let csgoClient   = new CSGO.CSGOClient(steamUser, steamGC, false);
+  let steamUser    = new User();
+  let csgoClient   = new CSGO(steamUser);
 
   bot.csgoClient = csgoClient;
 
@@ -23,7 +22,7 @@ module.exports = (bot, config) => {
       for (let i = 0; i < events.length; i++) {
         let event = require(path.join(__dirname, handlerType, events[i]));
         try {
-          event.init(steamClient, steamUser, steamFriends, csgoClient, bot, config);
+          event.init(steamUser, csgoClient, bot, config);
         } catch (err) {
           bot.log.error(err);
         }
@@ -33,6 +32,12 @@ module.exports = (bot, config) => {
 
   });
 
-  steamClient.connect();
+  steamUser.logOn({
+    accountName: config.steam.username,
+    password: config.steam.password,
+    twoFactorCode: SteamTotp.generateAuthCode(config.steam.shared_secret),
+    logonID: 1337,
+    machinenName: 'node-csgo-discord'
+  });
 
 }

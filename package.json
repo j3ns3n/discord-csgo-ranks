@@ -24,9 +24,11 @@
   "dependencies": {
     "csgo": "^1.5.15",
     "eris": "^0.13.3",
+    "globaloffensive": "^2.1.0",
     "mongodb": "^3.6.0",
     "steam": "^1.4.1",
     "steam-totp": "^2.1.1",
+    "steam-user": "^4.17.1",
     "steamid-parser": "^1.0.1"
   }
 }

@@ -16,7 +16,7 @@ module.exports = {
         return;
       }
       if (user != null && user.confirmed) {
-        bot.csgoClient.playerProfileRequest(parseInt(user.csgoid));
+        bot.csgoClient.requestPlayersProfile(user.steamid);
         return msg.channel.createMessage(':arrows_clockwise: │ Your account is now queued to update. Please ensure you are friends with the bot: <https://steamcommunity.com/profiles/76561199056234052/>');
       } else {
         return msg.channel.createMessage(':exclamation: │ There is no Steam account linked to your Discord account, use `cs.link <steam url>` or finish confirming to link one.');
