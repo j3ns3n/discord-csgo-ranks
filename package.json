@@ -1,0 +1,32 @@
+{
+  "name": "discord-csgo-ranks",
+  "version": "1.0.0",
+  "description": "Converting CS:GO ranks to Discord roles",
+  "main": "app.js",
+  "scripts": {
+    "test": "node tests/database.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J3ns3n/discord-csgo-ranks.git"
+  },
+  "keywords": [
+    "Discord",
+    "CSGO",
+    "Ranks"
+  ],
+  "author": "Jensen Larkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/J3ns3n/discord-csgo-ranks/issues"
+  },
+  "homepage": "https://github.com/J3ns3n/discord-csgo-ranks#readme",
+  "dependencies": {
+    "csgo": "^1.5.15",
+    "eris": "^0.13.3",
+    "mongodb": "^3.6.0",
+    "steam": "^1.4.1",
+    "steam-totp": "^2.1.1",
+    "steamid-parser": "^1.0.1"
+  }
+}

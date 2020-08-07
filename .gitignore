@@ -1,0 +1,5 @@
+node_modules/
+config.json
+.todo
+drain_*.csv
+package-lock.json
