@@ -15,7 +15,7 @@ module.exports = {
         msg.channel.createMessage(':x: | An error has occurred while retrieving your account.');
         return;
       }
-      if (user != null && user.confirmed) {
+      if (user != null && user.confirmed == true) {
         bot.csgoClient.requestPlayersProfile(user.steamid);
         return msg.channel.createMessage(':arrows_clockwise: │ Your account is now queued to update. Please ensure you are friends with the bot: <https://steamcommunity.com/profiles/76561199056234052/>');
       } else {
