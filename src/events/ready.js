@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = (bot, config) => {
-  bot.on('ready', () => {
+  bot.once('ready', () => {
     require(path.join(__dirname, '../handlers/steamHandler'))(bot, config);
   });
 }
