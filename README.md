@@ -1,5 +1,6 @@
 # Convert CS:GO Ranks to Discord Roles
 Prevent people lying about their CS:GO ranks in Discord by fetching them directly from the game!
+![Works like this!](https://please.get-some.help/AEvXp22.gif)
 ### Setup
 1. Clone the repo
 2. Rename config.example.json to config.json and fill it in
