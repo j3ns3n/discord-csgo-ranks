@@ -37,7 +37,7 @@ module.exports = (bot, config) => {
     password: config.steam.password,
     twoFactorCode: SteamTotp.generateAuthCode(config.steam.shared_secret),
     logonID: 1337,
-    machinenName: 'node-csgo-discord'
+    machineName: 'node-csgo-discord'
   });
 
 }
