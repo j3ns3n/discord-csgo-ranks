@@ -12,6 +12,7 @@ const handler = (bot, config, csgoClient, profile) => {
     if (err) {
       return bot.log.error(err);
     }
+    if (!user) return;
 
     if (user.rank == profile.ranking.rank_id) return;
 
