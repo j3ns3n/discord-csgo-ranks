@@ -1,7 +1,7 @@
 module.exports = (bot, config) => {
   bot.on('guildMemberAdd', (guild, member) => {
     if (!config.discord.defaultRole.enabled) return;
-    member.addRole(config.discord.defaultrole.id);
+    member.addRole(config.discord.defaultRole.id);
     member.user.getDMChannel().then((dmchannel) => {
       dmchannel.createMessage({
         embed: {
