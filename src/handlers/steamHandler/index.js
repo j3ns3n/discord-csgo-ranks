@@ -11,11 +11,9 @@ const handlerTypes = ['csgo', 'user'];
 module.exports = (bot, config) => {
   let steamUser    = new User();
   let csgoClient   = new CSGO(steamUser);
-  csgoClient.GCConnectionStatus = ['HAVE_SESSION',
-	'GC_GOING_DOWN',
-	'NO_SESSION',
-	'NO_SESSION_IN_LOGON_QUEUE',
-	'NO_STEAM'];
+  csgoClient.GCConnectionStatus = CSGO.GCConnectionStatus;
+  steamUser.EResult = User.EResult;
+  
 
   bot.csgoClient = csgoClient;
 
