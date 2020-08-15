@@ -11,7 +11,7 @@ const handlerTypes = ['csgo', 'user'];
 module.exports = (bot, config) => {
   let steamUser    = new User();
   let csgoClient   = new CSGO(steamUser);
-  csgoClient.GCConnectionStatus = CSGO.GCConnectionStatus;
+  csgoClient.GCConnectionStatus = Object.keys(CSGO.GCConnectionStatus);
   steamUser.EResult = User.EResult;
   
 
