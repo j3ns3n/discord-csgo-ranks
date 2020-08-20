@@ -36,3 +36,4 @@ Prevent people lying about their CS:GO ranks in Discord by fetching them directl
 ## TODO
 - [ ] Add profiles / profile commands
 - [ ] Auto update?
+- [ ] Test
