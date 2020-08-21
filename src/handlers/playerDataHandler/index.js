@@ -19,7 +19,7 @@ const handler = (bot, config, csgoClient, profile) => {
     let rank_id = profile.ranking.rank_id;
 
 
-    bot.db.updateUserRank(bot, account_id, rank_id);
+    bot.db.updateCSGOData(bot, account_id, profile);
 
     bot.discordRoleHandler(bot, config, user._id, rank_id);
   });
