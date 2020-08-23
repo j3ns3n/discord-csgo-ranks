@@ -32,3 +32,7 @@ Prevent people lying about their CS:GO ranks in Discord by fetching them directl
 - Where the numbers 0 to 18 are the role IDs of CS:GO ranks, from 0=Unranked to 18=Global Elite
 - _id is the server's ID
 - default is the role assigned when a user unlinks their account / joins the server if it is enabled in the config.
+
+## TODO
+- [ ] Add profiles / profile commands
+- [ ] Auto update?

@@ -70,13 +70,14 @@ class databaseHandler {
     });
   }
 
-  updateUserRank(bot, csgoID, rank) {
+  updateCSGOData(bot, csgoID, profile) {
     this.client.db(this.config.mongodb.dbname).collection(this.config.mongodb.collections.accounts).updateOne({
       'csgoid': {'$eq': csgoID.toString()}
     },
     {
       $set: {
-        'rank': rank
+        'rank': profile.ranking.rank_id,
+        'profileData': profile
       }
     }, {ignoreUndefined: true}, (err, result) => {
       if (err) return console.error(err);
