@@ -6,6 +6,11 @@ module.exports.init = (steamUser, csgoClient, bot, config) => {
       bot.log.info('Steam logged on!');
       steamUser.setPersona(1);
       steamUser.gamesPlayed([730]);
+      setTimeout(() => {
+        if (!bot.responding) {
+          bot.relog();
+        }
+      }, 60 * 1000)
     };
   });
 }
